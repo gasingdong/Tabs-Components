@@ -27,20 +27,18 @@ class TabLink {
     // Using the Item element, create a new instance of the TabItem class
     this.tabItem = new TabItem(this.itemElement);
     // Add a click event listener on this instance, calling the select method on click
-    this.element.addEventListener('click', () => {
-      if (this.parentTab.currentTab != this) {
-        this.select();
-        this.parentTab.currentTab.deselect();
-        this.parentTab.currentTab = this;
-      }
-    });
+    this.element.addEventListener('click', () => this.select());
   }
 
   select() {
-    // Add a class named "tabs-link-selected" to this link
-    this.element.classList.add('tabs-link-selected');
-    // Call the select method on the item associated with this link
-    this.tabItem.select();
+    if (this.parentTab.currentTab != this) {
+      // Add a class named "tabs-link-selected" to this link
+      this.element.classList.add('tabs-link-selected');
+      // Call the select method on the item associated with this link
+      this.tabItem.select();
+      this.parentTab.currentTab.deselect();
+      this.parentTab.currentTab = this;
+    }
   }
 
   deselect() {
