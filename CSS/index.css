@@ -29,8 +29,8 @@
   align-items: center;
   margin-top: 1px;
   border: 2.5px solid #931d25;
-  transition: max-height 1s ease-in;
-  max-height: 500px;
+  transition: max-height 0.5s ease-in 0s;
+  max-height: 170px;
   overflow: hidden;
 }
 .dropdown .dropdown-link {
@@ -47,6 +47,7 @@
 }
 .dropdown .dropdown-hidden {
   max-height: 0px;
+  transition: max-height 0.5s ease-out 0s;
 }
 
 .tabs {
@@ -104,6 +105,18 @@
 }
 .tabs .tabs-link-selected:hover {
   background-color: white;
+}
+
+.slide-show {
+  width: 100%;
+  height: 300px;
+}
+.slide-show .slide {
+  width: 100%;
+  display: none;
+}
+.slide-show .current-slide {
+  display: block;
 }
 
 body {

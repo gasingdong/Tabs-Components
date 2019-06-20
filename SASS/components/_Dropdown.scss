@@ -22,8 +22,8 @@
     align-items: center;  
     margin-top: 1px;
     border: 2.5px solid $lambda-red;
-    transition: max-height 1s ease-in;
-    max-height: 500px;
+    transition: max-height 0.5s ease-in 0s;
+    max-height: 170px;
     overflow: hidden;
   }
   .dropdown-link {
@@ -40,6 +40,7 @@
   }
   .dropdown-hidden {
     max-height: 0px;
+    transition: max-height 0.5s ease-out 0s;
   }
 }
 
