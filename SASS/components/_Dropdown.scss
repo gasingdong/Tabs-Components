@@ -20,8 +20,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;  
-    margin-top: 10px;
+    margin-top: 1px;
     border: 2.5px solid $lambda-red;
+    transition: max-height 1s ease-in;
+    max-height: 500px;
+    overflow: hidden;
   }
   .dropdown-link {
     width: 100%;
@@ -36,7 +39,7 @@
     }
   }
   .dropdown-hidden {
-    display: none;
+    max-height: 0px;
   }
 }
 
