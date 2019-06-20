@@ -1,14 +1,13 @@
 class Tabs {
   constructor(element) {
     this.element = element;
-    this.currentTab = null;
-    this.element.querySelectorAll('.tabs-link').forEach(link => {
-      const tabLink = new TabLink(link, this);
-
-      if (link.classList.contains('tabs-link-selected')) {
-        this.currentTab = tabLink;
-      }
-    });
+    this.currentTab = new TabLink(
+      this.element.querySelector('.tabs-link-selected'),
+      this
+    );
+    this.element
+      .querySelectorAll('.tabs-link')
+      .forEach(link => new TabLink(link, this));
   }
 }
 
