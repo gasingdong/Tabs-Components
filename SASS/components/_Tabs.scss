@@ -9,12 +9,22 @@
   }
   .tabs-item {
     display: none; 
-
     width: 75%;
+    overflow: hidden;
+    animation: fade-in 4s;
     .tabs-item-title {
       font-size: 24px;
       font-weight: bold;
       padding-bottom: 10px;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
   }
   .tabs-item-selected {
@@ -23,27 +33,27 @@
 
   .tabs-links {
     display: flex;
-    background-color: @lambda-red;
+    background-color: $lambda-red;
   }
 
   .tabs-link {
     padding: 20px 25px;
     font-size: 24px;
-    background-color: @lambda-red;
+    background-color: $lambda-red;
     border-right: 1px solid white;
-    color: @white;
+    color: $white;
     cursor: pointer;
     &:hover {
-      background-color: @lambda-light-red;
+      background-color: $lambda-light-red;
     }
   }
   .tabs-link-selected {
     z-index: 2;
-    border-right: 1px solid @lambda-red;
-    background-color: @white;
+    border-right: 1px solid $lambda-red;
+    background-color: $white;
     color: black;
     &:hover {
-      background-color: @white;
+      background-color: $white;
     }
   }
 }
