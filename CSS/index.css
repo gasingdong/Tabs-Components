@@ -110,6 +110,7 @@
 .slide-show {
   width: 100%;
   height: 300px;
+  position: relative;
 }
 .slide-show .slide {
   width: 100%;
@@ -117,6 +118,26 @@
 }
 .slide-show .current-slide {
   display: block;
+  animation: fade-in-img 5s;
+}
+@keyframes fade-in-img {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.slide-show .slide-arrow-prev, .slide-show .slide-arrow-next {
+  position: absolute;
+  cursor: pointer;
+  top: 120px;
+  background-color: #931d25;
+  color: white;
+  padding: 15px;
+}
+.slide-show .slide-arrow-next {
+  right: 0;
 }
 
 body {

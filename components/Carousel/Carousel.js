@@ -53,5 +53,5 @@ setInterval(
     slideshows.forEach(slideshow => {
       slideshow.nextSlide();
     }),
-  1000
+  5000
 );
